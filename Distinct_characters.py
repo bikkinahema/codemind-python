@@ -1,17 +1,14 @@
 n=input()
 n=n.replace(" ","")
 n=n.lower()
-s=''
-for i in n:
-    if i in s:
-        continue
-    else:
-        s+=i
 l=[]
-for i in s:
-    p=ord(i)
-    l.append(p)
-f=sorted(l)
+c=0
+for i in n:
+        l.append(i)
+f=[]
+for i in l:
+    if l.count(i)==1:
+        f.append(i)
+f=sorted(f)
 for i in f:
-    o=chr(i)
-    print(o,end='')
+    print(i,end='')
